@@ -182,7 +182,11 @@ if st.button("⚡ 生成章节", use_container_width=True):
             st.session_state.elapsed = elapsed
             
         except Exception as e:
-            st.error(f"生成失败: {e}")
+            err = str(e)
+            if "下载失败" in err or "Connection" in err or "unable to access" in err.lower():
+                st.error("YouTube下载失败: 国内网络需要开代理才能访问YouTube。请尝试「上传视频」或「已有SRT字幕」方式。")
+            else:
+                st.error(f"生成失败: {err}")
             st.stop()
     
     st.success(f"✅ 完成! 耗时 {elapsed:.0f}秒")
@@ -256,7 +260,12 @@ if "chapters" in st.session_state and st.session_state.chapters:
 st.markdown("---")
 st.markdown("""
 <div style="text-align:center;color:#999;font-size:0.8rem;">
-    Built with ❤️ | 全本地零API | <a href="https://github.com">GitHub</a> | 
-    <a href="#">Pro版去水印</a> $4.99/月
+    Built with ❤️ | 全本地零API | <a href="#">GitHub</a>
+</div>
+<div style="text-align:center;margin-top:12px;">
+    <a href="https://paypal.me/biuta666" target="_blank" 
+       style="display:inline-block;background:linear-gradient(135deg,#ffc439,#e6a817);color:#003087;padding:10px 28px;border-radius:25px;font-weight:700;font-size:0.95rem;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+       ☕ Buy Me a Coffee · $4.99
+    </a>
 </div>
 """, unsafe_allow_html=True)

@@ -2,3 +2,4 @@ streamlit>=1.28
 openai-whisper>=20231117
 numpy>=1.24
 Pillow>=10.0
+yt-dlp>=2024
