@@ -1,7 +1,7 @@
 ## Pro Version
 
-Batch processing (playlists/multiple URLs): **$19 one-time**
+Batch processing (playlists/multiple URLs / local folders): **$19 one-time**
 
-👉 https://paypal.me/biuta666/19
+👉 https://ieqqnet.gumroad.com/l/hqiev
 
-After payment, email ieqqnet@163.com - I'll send the pro zip within 24h.
+Free CLI version above. Pro adds batch processing + priority support.
